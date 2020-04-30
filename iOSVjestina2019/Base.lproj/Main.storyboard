@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,77 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSVjestina2019" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMc-xo-Cfl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PopQuiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q80-UB-5Qf">
+                                <rect key="frame" x="139" y="44" width="136" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q80-UB-5Qf" secondAttribute="height" multiplier="68:25" id="255-2q-Y05"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwy-Kc-UsA">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lwy-Kc-UsA" secondAttribute="height" multiplier="207:22" id="bic-Lg-UpI"/>
+                                    <constraint firstAttribute="width" constant="414" id="nDg-ft-UF2"/>
+                                </constraints>
+                                <items/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gj8-w3-vRE">
+                                <rect key="frame" x="31" y="146" width="352" height="73"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gj8-w3-vRE" secondAttribute="height" multiplier="352:73" id="gh8-bA-j0H"/>
+                                    <constraint firstAttribute="width" constant="352" id="zBr-HC-iFy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Get quiz">
+                                    <color key="titleColor" red="0.76862745098039209" green="0.058823529411764705" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="37"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gj8-w3-vRE" secondAttribute="trailing" constant="31" id="1Ha-7f-bKB"/>
+                            <constraint firstItem="CMc-xo-Cfl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1oZ-hq-fhu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lwy-Kc-UsA" secondAttribute="bottom" id="5DV-pX-1sY"/>
+                            <constraint firstItem="Gj8-w3-vRE" firstAttribute="top" secondItem="Q80-UB-5Qf" secondAttribute="bottom" constant="52" id="8p5-jh-o0c"/>
+                            <constraint firstItem="Gj8-w3-vRE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="Elp-qw-ad9"/>
+                            <constraint firstItem="CMc-xo-Cfl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F7U-AR-PMm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q80-UB-5Qf" secondAttribute="trailing" constant="139" id="JdU-AS-6Zn"/>
+                            <constraint firstItem="Q80-UB-5Qf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="NZ1-Fh-Ub7"/>
+                            <constraint firstItem="CMc-xo-Cfl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bZZ-B3-2Rn"/>
+                            <constraint firstItem="lwy-Kc-UsA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hdQ-ee-iSe"/>
+                            <constraint firstItem="lwy-Kc-UsA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i1r-ih-aE7"/>
+                            <constraint firstAttribute="bottom" secondItem="CMc-xo-Cfl" secondAttribute="bottom" id="oY3-cq-eof"/>
+                            <constraint firstItem="Q80-UB-5Qf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ogj-68-qmm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundGradientView" destination="CMc-xo-Cfl" id="2rC-qK-Qm0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
     </scenes>
 </document>
