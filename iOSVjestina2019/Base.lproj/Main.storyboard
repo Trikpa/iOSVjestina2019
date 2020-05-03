@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rew-PE-TXE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Quiz-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSVjestina2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Quiz" title="Quiz" id="BYZ-38-t0r" customClass="QuizViewController" customModule="iOSVjestina2019" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,6 +18,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMc-xo-Cfl">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <gestureRecognizers/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PopQuiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q80-UB-5Qf">
                                 <rect key="frame" x="139" y="44" width="136" height="50"/>
@@ -28,16 +29,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwy-Kc-UsA">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="lwy-Kc-UsA" secondAttribute="height" multiplier="207:22" id="bic-Lg-UpI"/>
-                                    <constraint firstAttribute="width" constant="414" id="nDg-ft-UF2"/>
-                                </constraints>
-                                <items/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gj8-w3-vRE">
                                 <rect key="frame" x="31" y="146" width="352" height="73"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,40 +38,152 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Get quiz">
-                                    <color key="titleColor" red="0.76862745098039209" green="0.058823529411764705" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.76862745099999996" green="0.058823529409999999" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="37"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="GetQuiz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bwe-aU-qDx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gj8-w3-vRE" secondAttribute="trailing" constant="31" id="1Ha-7f-bKB"/>
                             <constraint firstItem="CMc-xo-Cfl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1oZ-hq-fhu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lwy-Kc-UsA" secondAttribute="bottom" id="5DV-pX-1sY"/>
                             <constraint firstItem="Gj8-w3-vRE" firstAttribute="top" secondItem="Q80-UB-5Qf" secondAttribute="bottom" constant="52" id="8p5-jh-o0c"/>
                             <constraint firstItem="Gj8-w3-vRE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="Elp-qw-ad9"/>
                             <constraint firstItem="CMc-xo-Cfl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F7U-AR-PMm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q80-UB-5Qf" secondAttribute="trailing" constant="139" id="JdU-AS-6Zn"/>
                             <constraint firstItem="Q80-UB-5Qf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="NZ1-Fh-Ub7"/>
                             <constraint firstItem="CMc-xo-Cfl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bZZ-B3-2Rn"/>
-                            <constraint firstItem="lwy-Kc-UsA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hdQ-ee-iSe"/>
-                            <constraint firstItem="lwy-Kc-UsA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i1r-ih-aE7"/>
                             <constraint firstAttribute="bottom" secondItem="CMc-xo-Cfl" secondAttribute="bottom" id="oY3-cq-eof"/>
                             <constraint firstItem="Q80-UB-5Qf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ogj-68-qmm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Quiz" image="questionmark.square" catalog="system" id="Vo2-v8-fgL"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backgroundGradientView" destination="CMc-xo-Cfl" id="2rC-qK-Qm0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+            <point key="canvasLocation" x="-1261" y="6"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="hRG-j0-JyH">
+            <objects>
+                <viewController storyboardIdentifier="Search" title="Search" id="nk4-bk-yDj" customClass="QuizViewController" customModule="iOSVjestina2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="udD-6y-m0l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dby-hm-Pme">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <viewLayoutGuide key="safeArea" id="UB1-QS-QoE"/>
+                            </view>
+                            <searchBar opaque="NO" contentMode="redraw" searchBarStyle="minimal" placeholder="Type here" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-Ma-sFE">
+                                <rect key="frame" x="10" y="49" width="275" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="QZt-bM-DGo"/>
+                                    <constraint firstAttribute="width" secondItem="gFc-Ma-sFE" secondAttribute="height" multiplier="25:4" id="RrS-mC-aic"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxV-4b-A25">
+                                <rect key="frame" x="295" y="49" width="89" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nUb-od-3qZ" firstAttribute="bottom" secondItem="Dby-hm-Pme" secondAttribute="bottom" constant="-63" id="2fu-06-P0m"/>
+                            <constraint firstItem="gFc-Ma-sFE" firstAttribute="leading" secondItem="nUb-od-3qZ" secondAttribute="leading" constant="10" id="BMc-5x-82u"/>
+                            <constraint firstItem="Dby-hm-Pme" firstAttribute="leading" secondItem="nUb-od-3qZ" secondAttribute="leading" id="FnW-Ra-Ri2"/>
+                            <constraint firstItem="Dby-hm-Pme" firstAttribute="trailing" secondItem="nUb-od-3qZ" secondAttribute="trailing" id="GAE-hl-aCa"/>
+                            <constraint firstItem="gFc-Ma-sFE" firstAttribute="top" secondItem="nUb-od-3qZ" secondAttribute="top" constant="5" id="MTu-vO-rBV"/>
+                            <constraint firstItem="Dby-hm-Pme" firstAttribute="top" secondItem="nUb-od-3qZ" secondAttribute="top" constant="-44" id="Sh5-YZ-Jyb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nUb-od-3qZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="42c-Ph-NmK"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundGradientView" destination="Dby-hm-Pme" id="8B2-DY-MyU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vtv-Aa-Iyk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94.20289855072464" y="4.6875"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="8wi-Xc-4aH">
+            <objects>
+                <viewController storyboardIdentifier="Settings" title="Settings" id="fDR-yT-pSL" customClass="QuizViewController" customModule="iOSVjestina2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="98V-Hl-eVN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOC-zr-x4T">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZOC-zr-x4T" firstAttribute="top" secondItem="98V-Hl-eVN" secondAttribute="top" id="0vI-FY-OUb"/>
+                            <constraint firstItem="ZOC-zr-x4T" firstAttribute="trailing" secondItem="tZm-Im-nTA" secondAttribute="trailing" id="C1U-TD-Qwh"/>
+                            <constraint firstAttribute="bottom" secondItem="ZOC-zr-x4T" secondAttribute="bottom" id="Jrc-Q2-6cK"/>
+                            <constraint firstItem="ZOC-zr-x4T" firstAttribute="leading" secondItem="tZm-Im-nTA" secondAttribute="leading" id="wSB-Tq-ldc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tZm-Im-nTA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="person" catalog="system" id="LAp-mM-e6M"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundGradientView" destination="ZOC-zr-x4T" id="prE-N9-BcY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDy-Tk-Uow" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WPB-pM-RUB">
+            <objects>
+                <tabBarController id="rew-PE-TXE" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZCH-vq-lwc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="kmd-ki-9F9"/>
+                        <segue destination="nk4-bk-yDj" kind="relationship" relationship="viewControllers" id="oMl-5x-ICh"/>
+                        <segue destination="fDR-yT-pSL" kind="relationship" relationship="viewControllers" id="H5m-vN-3ZY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FN1-nh-NYk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-93" y="-820"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="questionmark.square" catalog="system" width="128" height="114"/>
+    </resources>
 </document>
