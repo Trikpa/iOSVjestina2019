@@ -11,6 +11,7 @@
 		52000E36245C508D0027C6DD /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52000E35245C508D0027C6DD /* Repo.swift */; };
 		52000E38245C63640027C6DD /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52000E37245C63640027C6DD /* Quiz.swift */; };
 		52000E3A245C65140027C6DD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52000E39245C65140027C6DD /* Question.swift */; };
+		528E78512468603E00D0FBE6 /* QuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E78502468603E00D0FBE6 /* QuizCell.swift */; };
 		52E1F75E245B6F7E00B054D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1F75D245B6F7E00B054D2 /* AppDelegate.swift */; };
 		52E1F760245B6F7E00B054D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1F75F245B6F7E00B054D2 /* SceneDelegate.swift */; };
 		52E1F762245B6F7E00B054D2 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1F761245B6F7E00B054D2 /* QuizViewController.swift */; };
@@ -24,6 +25,7 @@
 		52000E35245C508D0027C6DD /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		52000E37245C63640027C6DD /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		52000E39245C65140027C6DD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		528E78502468603E00D0FBE6 /* QuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCell.swift; sourceTree = "<group>"; };
 		52E1F75A245B6F7E00B054D2 /* iOSVjestina2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSVjestina2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E1F75D245B6F7E00B054D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E1F75F245B6F7E00B054D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		528E784E24685FA400D0FBE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52000E35245C508D0027C6DD /* Repo.swift */,
+				52000E37245C63640027C6DD /* Quiz.swift */,
+				52000E39245C65140027C6DD /* Question.swift */,
+				528E78502468603E00D0FBE6 /* QuizCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		528E784F24685FDC00D0FBE6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52E1F761245B6F7E00B054D2 /* QuizViewController.swift */,
+				52000E33245C50070027C6DD /* SearchViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		52E1F751245B6F7D00B054D2 = {
 			isa = PBXGroup;
 			children = (
@@ -66,15 +88,12 @@
 			children = (
 				52E1F75D245B6F7E00B054D2 /* AppDelegate.swift */,
 				52E1F75F245B6F7E00B054D2 /* SceneDelegate.swift */,
-				52E1F761245B6F7E00B054D2 /* QuizViewController.swift */,
+				528E784E24685FA400D0FBE6 /* Models */,
+				528E784F24685FDC00D0FBE6 /* View Controllers */,
 				52E1F763245B6F7E00B054D2 /* Main.storyboard */,
 				52E1F766245B6F8000B054D2 /* Assets.xcassets */,
 				52E1F768245B6F8000B054D2 /* LaunchScreen.storyboard */,
 				52E1F76B245B6F8000B054D2 /* Info.plist */,
-				52000E33245C50070027C6DD /* SearchViewController.swift */,
-				52000E35245C508D0027C6DD /* Repo.swift */,
-				52000E37245C63640027C6DD /* Quiz.swift */,
-				52000E39245C65140027C6DD /* Question.swift */,
 			);
 			path = iOSVjestina2019;
 			sourceTree = "<group>";
@@ -152,6 +171,7 @@
 			files = (
 				52E1F762245B6F7E00B054D2 /* QuizViewController.swift in Sources */,
 				52E1F75E245B6F7E00B054D2 /* AppDelegate.swift in Sources */,
+				528E78512468603E00D0FBE6 /* QuizCell.swift in Sources */,
 				52000E38245C63640027C6DD /* Quiz.swift in Sources */,
 				52000E36245C508D0027C6DD /* Repo.swift in Sources */,
 				52000E34245C50070027C6DD /* SearchViewController.swift in Sources */,

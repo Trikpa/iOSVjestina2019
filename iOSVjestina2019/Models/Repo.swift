@@ -11,7 +11,8 @@ import UIKit
 
 class Repo {
     
-    public static func createGradientBackground(_ view: UIView, _ backgroundGradientView: UIView) {
+    public static func createGradientBackground(_ view: UIView, _ backgroundGradientView: UIView)
+    {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
         
@@ -26,5 +27,15 @@ class Repo {
         
         gradientLayer.startPoint = CGPoint(x: 1, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0.6, y: 1)
+    }
+    
+    public static func getImage(urlString: String) -> UIImageView {
+        let url = URL(string: urlString)!
+        let imageView = UIImageView()
+
+        let data = try? Data(contentsOf: url)
+        imageView.image = UIImage(data: data!)
+        
+        return imageView
     }
 }

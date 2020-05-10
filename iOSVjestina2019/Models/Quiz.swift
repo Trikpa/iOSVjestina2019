@@ -18,13 +18,17 @@ enum Category : String, CaseIterable {
     }
 }
 
+struct Quizzes : Decodable {
+    var quizzes: [Quiz]
+}
+
 struct Quiz : Decodable {
     var id:            Int
     var title:         String
     var description:   String
     var category:      Category
     var level:         Int
-    var imageLocation: String
+    var image:         String
     var questions:     [Question]
     
     init(from decoder: Decoder) throws {
@@ -34,17 +38,17 @@ struct Quiz : Decodable {
         description = try values.decode(String.self, forKey: .description)
         category = try Category(rawValue: (values.decode(String.self, forKey: .category))) ?? Category.UNDEFINED
         level = try values.decode(Int.self, forKey: .level)
-        imageLocation = try values.decode(String.self, forKey: .imageLocation)
+        image = try values.decode(String.self, forKey: .image)
         questions = try values.decode([Question].self, forKey: .questions)
     }
     
-    enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case title = "title"
-        case description = "description"
-        case category = "category"
-        case level = "level"
-        case imageLocation = "image"
-        case questions = "questions"
+    enum CodingKeys : String, CodingKey {
+        case id
+        case title
+        case description
+        case category
+        case level
+        case image
+        case questions
     }
 }

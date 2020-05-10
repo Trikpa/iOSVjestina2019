@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3EEF5DB6-54C2-4986-8E2B-1753AF347E3A"
+            uuid = "3C097B30-1197-433D-8DED-E0CC5DDF251E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOSVjestina2019/QuizViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "getData()"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "GenerateFunFact(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "592731DB-AA53-4FCC-827E-AF8137D8D61F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSVjestina2019/Models/QuizCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "setQuiz(quiz:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
