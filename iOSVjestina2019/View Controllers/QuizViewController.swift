@@ -20,6 +20,9 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var quizContainerTable: UITableView!
     
     var quizzes: [Quiz] = []
+    var quizzesByCategory = [Category: [Quiz]]()
+    var sections: Set<Category> = []
+    var arrSections: Array<Category> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +36,7 @@ class QuizViewController: UIViewController {
     
     @IBAction func GenerateFunFact(_ sender: UIButton) {
         var numberOfQsContainingWord: Int = 0
-        self.quizzes.forEach { (q: Quiz) in
+        self.quizzes.forEach { q in
             q.questions.forEach { (qst: Question) in
                 if (qst.question.contains("NBA")) {
                     numberOfQsContainingWord += 1
@@ -62,7 +65,12 @@ class QuizViewController: UIViewController {
 
                 for q in quiz!.quizzes {
                     self.quizzes.append(q)
+                    self.sections.insert(q.category)
                 }
+                
+                self.arrSections = Array(self.sections)
+                
+                self.quizzesByCategory = Dictionary(grouping: self.quizzes, by: { ($0.category) })
                 
                 DispatchQueue.main.async {
                     self.funFactContainer.isHidden = false
@@ -79,15 +87,27 @@ class QuizViewController: UIViewController {
 
 extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return quizzes.count
+        return quizzesByCategory[self.arrSections[section]]?.count ?? 0 //return the number of quizzes for each category
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return arrSections[section].rawValue
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell", for: indexPath) as! QuizCell
+        
+        let currentKey = arrSections[indexPath.row]
+        print(indexPath.row)
+//        let quiz = quizzesByCategory[currentKey]?[indexPath.row]
+        
         let quiz = quizzes[indexPath.row]
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell") as! QuizCell
-        
         cell.setQuiz(quiz: quiz)
         
         return cell

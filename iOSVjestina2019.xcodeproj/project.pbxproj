@@ -91,8 +91,8 @@
 				528E784E24685FA400D0FBE6 /* Models */,
 				528E784F24685FDC00D0FBE6 /* View Controllers */,
 				52E1F763245B6F7E00B054D2 /* Main.storyboard */,
-				52E1F766245B6F8000B054D2 /* Assets.xcassets */,
 				52E1F768245B6F8000B054D2 /* LaunchScreen.storyboard */,
+				52E1F766245B6F8000B054D2 /* Assets.xcassets */,
 				52E1F76B245B6F8000B054D2 /* Info.plist */,
 			);
 			path = iOSVjestina2019;
