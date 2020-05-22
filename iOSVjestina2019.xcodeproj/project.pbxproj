@@ -12,12 +12,14 @@
 		52000E38245C63640027C6DD /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52000E37245C63640027C6DD /* Quiz.swift */; };
 		52000E3A245C65140027C6DD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52000E39245C65140027C6DD /* Question.swift */; };
 		528E78512468603E00D0FBE6 /* QuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E78502468603E00D0FBE6 /* QuizCell.swift */; };
+		528FA2C82476D9D400FB4552 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528FA2C72476D9D400FB4552 /* QuizViewController.swift */; };
 		52E1F75E245B6F7E00B054D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1F75D245B6F7E00B054D2 /* AppDelegate.swift */; };
 		52E1F760245B6F7E00B054D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1F75F245B6F7E00B054D2 /* SceneDelegate.swift */; };
-		52E1F762245B6F7E00B054D2 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1F761245B6F7E00B054D2 /* QuizViewController.swift */; };
+		52E1F762245B6F7E00B054D2 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1F761245B6F7E00B054D2 /* MainMenuViewController.swift */; };
 		52E1F765245B6F7E00B054D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E1F763245B6F7E00B054D2 /* Main.storyboard */; };
 		52E1F767245B6F8000B054D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E1F766245B6F8000B054D2 /* Assets.xcassets */; };
 		52E1F76A245B6F8000B054D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E1F768245B6F8000B054D2 /* LaunchScreen.storyboard */; };
+		B54462D952D3F765BA3B2BF2 /* Pods_iOSVjestina2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5542644D535FE7FC0E47404C /* Pods_iOSVjestina2019.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,14 +28,18 @@
 		52000E37245C63640027C6DD /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		52000E39245C65140027C6DD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		528E78502468603E00D0FBE6 /* QuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCell.swift; sourceTree = "<group>"; };
+		528FA2C72476D9D400FB4552 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		52E1F75A245B6F7E00B054D2 /* iOSVjestina2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSVjestina2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E1F75D245B6F7E00B054D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E1F75F245B6F7E00B054D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52E1F761245B6F7E00B054D2 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		52E1F761245B6F7E00B054D2 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		52E1F764245B6F7E00B054D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52E1F766245B6F8000B054D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E1F769245B6F8000B054D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52E1F76B245B6F8000B054D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5542644D535FE7FC0E47404C /* Pods_iOSVjestina2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSVjestina2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3FC101598148E3BE9364819 /* Pods-iOSVjestina2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSVjestina2019.debug.xcconfig"; path = "Target Support Files/Pods-iOSVjestina2019/Pods-iOSVjestina2019.debug.xcconfig"; sourceTree = "<group>"; };
+		B925CFC1BE9560A451771ED1 /* Pods-iOSVjestina2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSVjestina2019.release.xcconfig"; path = "Target Support Files/Pods-iOSVjestina2019/Pods-iOSVjestina2019.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +47,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54462D952D3F765BA3B2BF2 /* Pods_iOSVjestina2019.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DAA61548E50C3F7DA3DB0AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3FC101598148E3BE9364819 /* Pods-iOSVjestina2019.debug.xcconfig */,
+				B925CFC1BE9560A451771ED1 /* Pods-iOSVjestina2019.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		30A3007E134941E62CEA7BCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5542644D535FE7FC0E47404C /* Pods_iOSVjestina2019.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		528E784E24685FA400D0FBE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +86,9 @@
 		528E784F24685FDC00D0FBE6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				52E1F761245B6F7E00B054D2 /* QuizViewController.swift */,
+				52E1F761245B6F7E00B054D2 /* MainMenuViewController.swift */,
 				52000E33245C50070027C6DD /* SearchViewController.swift */,
+				528FA2C72476D9D400FB4552 /* QuizViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -72,6 +98,8 @@
 			children = (
 				52E1F75C245B6F7E00B054D2 /* iOSVjestina2019 */,
 				52E1F75B245B6F7E00B054D2 /* Products */,
+				1DAA61548E50C3F7DA3DB0AF /* Pods */,
+				30A3007E134941E62CEA7BCD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52E1F76E245B6F8000B054D2 /* Build configuration list for PBXNativeTarget "iOSVjestina2019" */;
 			buildPhases = (
+				68DAF279A3100544206C0E50 /* [CP] Check Pods Manifest.lock */,
 				52E1F756245B6F7E00B054D2 /* Sources */,
 				52E1F757245B6F7E00B054D2 /* Frameworks */,
 				52E1F758245B6F7E00B054D2 /* Resources */,
+				3F38027B1EF34A31D4F4AEAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,17 +194,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F38027B1EF34A31D4F4AEAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSVjestina2019/Pods-iOSVjestina2019-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSVjestina2019/Pods-iOSVjestina2019-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSVjestina2019/Pods-iOSVjestina2019-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68DAF279A3100544206C0E50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSVjestina2019-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52E1F756245B6F7E00B054D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E1F762245B6F7E00B054D2 /* QuizViewController.swift in Sources */,
+				52E1F762245B6F7E00B054D2 /* MainMenuViewController.swift in Sources */,
 				52E1F75E245B6F7E00B054D2 /* AppDelegate.swift in Sources */,
 				528E78512468603E00D0FBE6 /* QuizCell.swift in Sources */,
 				52000E38245C63640027C6DD /* Quiz.swift in Sources */,
 				52000E36245C508D0027C6DD /* Repo.swift in Sources */,
 				52000E34245C50070027C6DD /* SearchViewController.swift in Sources */,
+				528FA2C82476D9D400FB4552 /* QuizViewController.swift in Sources */,
 				52000E3A245C65140027C6DD /* Question.swift in Sources */,
 				52E1F760245B6F7E00B054D2 /* SceneDelegate.swift in Sources */,
 			);
@@ -318,6 +391,7 @@
 		};
 		52E1F76F245B6F8000B054D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3FC101598148E3BE9364819 /* Pods-iOSVjestina2019.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +410,7 @@
 		};
 		52E1F770245B6F8000B054D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B925CFC1BE9560A451771ED1 /* Pods-iOSVjestina2019.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
