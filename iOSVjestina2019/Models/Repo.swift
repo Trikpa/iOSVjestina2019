@@ -38,4 +38,12 @@ class Repo {
         
         return imageView
     }
+    
+    public static func correctAnswerColor() -> UIColor {
+        return UIColor(red: 78/256, green: 224/256, blue: 100/256, alpha: 1)
+    }
+    
+    public static func wrongAnswerColor() -> UIColor {
+        return UIColor(red: 224/256, green: 61/256, blue: 85/256, alpha: 1)
+    }
 }

@@ -24,67 +24,81 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PopQuiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hC9-ir-wty">
-                                        <rect key="frame" x="135" y="0.0" width="144" height="30"/>
+                                        <rect key="frame" x="135" y="0.0" width="144" height="41"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-WY-m6P">
-                                        <rect key="frame" x="8" y="4" width="12.5" height="22"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="chevron.left" catalog="system"/>
+                                        <rect key="frame" x="8" y="9.5" width="12.5" height="22"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="chevron.left" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="GoBack:" destination="5gH-9S-y8H" eventType="touchUpInside" id="DR7-qg-1XF"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Croatian national team won the silver medal at the 2018. World Cup in...?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f2p-4L-H5C">
-                                        <rect key="frame" x="8" y="122.5" width="398" height="101.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The Croatian national team won the silver medal at the 2018. World Cup in...?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f2p-4L-H5C">
+                                        <rect key="frame" x="8" y="128" width="398" height="90"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xuj-iQ-MQr">
-                                        <rect key="frame" x="8" y="83" width="398" height="22"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZEa-IL-FUj">
-                                        <rect key="frame" x="23" y="299" width="368" height="459"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71H-FD-rea">
+                                        <rect key="frame" x="8" y="103" width="398" height="18"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xuj-iQ-MQr">
+                                                <rect key="frame" x="4" y="4" width="391" height="11"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="ZEa-IL-FUj" secondAttribute="height" multiplier="355:443" id="LDU-Up-0xo"/>
+                                            <constraint firstItem="xuj-iQ-MQr" firstAttribute="leading" secondItem="71H-FD-rea" secondAttribute="leading" constant="4" id="0zy-fX-DUg"/>
+                                            <constraint firstItem="xuj-iQ-MQr" firstAttribute="top" secondItem="71H-FD-rea" secondAttribute="top" constant="4" id="3xu-BL-Hrg"/>
+                                            <constraint firstAttribute="bottom" secondItem="xuj-iQ-MQr" secondAttribute="bottom" constant="3" id="X7E-BW-iW9"/>
+                                            <constraint firstItem="xuj-iQ-MQr" firstAttribute="centerX" secondItem="71H-FD-rea" secondAttribute="centerX" id="tHF-Mo-TXw"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZEa-IL-FUj">
+                                        <rect key="frame" x="23" y="352" width="368" height="379"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pd-in-z7n">
-                                        <rect key="frame" x="8" y="52" width="37" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pd-in-z7n">
+                                        <rect key="frame" x="8" y="57.5" width="47" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="ZEa-IL-FUj" firstAttribute="top" secondItem="f2p-4L-H5C" secondAttribute="bottom" constant="75" id="1wN-Fm-Ojo"/>
-                                    <constraint firstItem="xuj-iQ-MQr" firstAttribute="centerX" secondItem="h6t-68-SIk" secondAttribute="centerX" id="7ae-Ym-dej"/>
+                                    <constraint firstItem="ZEa-IL-FUj" firstAttribute="top" secondItem="f2p-4L-H5C" secondAttribute="bottom" constant="122.5" id="1wN-Fm-Ojo"/>
                                     <constraint firstItem="cCl-WY-m6P" firstAttribute="centerY" secondItem="hC9-ir-wty" secondAttribute="centerY" id="DBp-Sv-K8Y"/>
                                     <constraint firstItem="f2p-4L-H5C" firstAttribute="top" secondItem="7Pd-in-z7n" secondAttribute="bottom" constant="47.5" id="Dcu-mh-fAf"/>
                                     <constraint firstAttribute="trailing" secondItem="hC9-ir-wty" secondAttribute="trailing" constant="135" id="EbB-p3-cq1"/>
                                     <constraint firstItem="7Pd-in-z7n" firstAttribute="leading" secondItem="h6t-68-SIk" secondAttribute="leading" constant="8" id="En2-ku-WLC"/>
                                     <constraint firstAttribute="trailing" secondItem="ZEa-IL-FUj" secondAttribute="trailing" constant="23" id="En9-aH-Xol"/>
-                                    <constraint firstItem="xuj-iQ-MQr" firstAttribute="leading" secondItem="h6t-68-SIk" secondAttribute="leading" constant="8" id="FPF-8y-Fxx"/>
-                                    <constraint firstAttribute="trailing" secondItem="7Pd-in-z7n" secondAttribute="trailing" constant="369" id="FQK-aQ-S9Y"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZEa-IL-FUj" secondAttribute="bottom" constant="60" id="Mxm-Vj-jwr"/>
-                                    <constraint firstAttribute="bottom" secondItem="xuj-iQ-MQr" secondAttribute="bottom" constant="713" id="Rmt-VW-qow"/>
-                                    <constraint firstItem="xuj-iQ-MQr" firstAttribute="top" secondItem="7Pd-in-z7n" secondAttribute="bottom" constant="8" id="SHW-Sn-tot"/>
-                                    <constraint firstItem="xuj-iQ-MQr" firstAttribute="trailing" secondItem="f2p-4L-H5C" secondAttribute="trailing" id="Ui0-hZ-Oph"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Pd-in-z7n" secondAttribute="trailing" constant="359" id="FQK-aQ-S9Y"/>
+                                    <constraint firstItem="71H-FD-rea" firstAttribute="leading" secondItem="7Pd-in-z7n" secondAttribute="leading" id="JTO-Ct-YjI"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZEa-IL-FUj" secondAttribute="bottom" constant="87" id="Mxm-Vj-jwr"/>
+                                    <constraint firstItem="f2p-4L-H5C" firstAttribute="top" secondItem="71H-FD-rea" secondAttribute="bottom" constant="7" id="NlP-x5-IIp"/>
                                     <constraint firstItem="ZEa-IL-FUj" firstAttribute="leading" secondItem="h6t-68-SIk" secondAttribute="leading" constant="23" id="Y8w-zR-wGN"/>
                                     <constraint firstItem="7Pd-in-z7n" firstAttribute="top" secondItem="cCl-WY-m6P" secondAttribute="bottom" constant="26" id="aou-eK-t0m"/>
-                                    <constraint firstItem="7Pd-in-z7n" firstAttribute="leading" secondItem="xuj-iQ-MQr" secondAttribute="leading" id="gv1-9g-CkI"/>
+                                    <constraint firstItem="71H-FD-rea" firstAttribute="top" secondItem="7Pd-in-z7n" secondAttribute="bottom" constant="22.5" id="dxW-JH-3XL"/>
+                                    <constraint firstItem="71H-FD-rea" firstAttribute="trailing" secondItem="f2p-4L-H5C" secondAttribute="trailing" id="jFT-B7-03U"/>
                                     <constraint firstItem="hC9-ir-wty" firstAttribute="centerX" secondItem="h6t-68-SIk" secondAttribute="centerX" id="kqc-E9-ltc"/>
                                     <constraint firstItem="cCl-WY-m6P" firstAttribute="leading" secondItem="7Pd-in-z7n" secondAttribute="leading" id="m8i-1g-DJ6"/>
                                     <constraint firstItem="hC9-ir-wty" firstAttribute="top" secondItem="h6t-68-SIk" secondAttribute="top" id="pch-eH-G2h"/>
-                                    <constraint firstItem="xuj-iQ-MQr" firstAttribute="top" secondItem="hC9-ir-wty" secondAttribute="bottom" constant="53" id="sil-d9-a4A"/>
-                                    <constraint firstItem="xuj-iQ-MQr" firstAttribute="leading" secondItem="f2p-4L-H5C" secondAttribute="leading" id="v2e-gl-Yej"/>
-                                    <constraint firstAttribute="trailing" secondItem="xuj-iQ-MQr" secondAttribute="trailing" constant="8" id="zOi-Yj-pKj"/>
+                                    <constraint firstItem="71H-FD-rea" firstAttribute="centerX" secondItem="hC9-ir-wty" secondAttribute="centerX" id="y9k-pu-nkk"/>
+                                    <constraint firstItem="71H-FD-rea" firstAttribute="leading" secondItem="f2p-4L-H5C" secondAttribute="leading" id="yiT-In-oyc"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -106,6 +120,7 @@
                         <outlet property="backgroundGradientView" destination="Kvx-W5-YD4" id="Lve-5J-jc5"/>
                         <outlet property="lblQuestion" destination="f2p-4L-H5C" id="MlK-Ro-cPo"/>
                         <outlet property="lblQuizProgress" destination="7Pd-in-z7n" id="A8l-aH-cwM"/>
+                        <outlet property="mainContainer" destination="h6t-68-SIk" id="0rd-f0-Ifv"/>
                         <outlet property="quizProgressContainer" destination="xuj-iQ-MQr" id="gs3-2o-ZVe"/>
                     </connections>
                 </viewController>
