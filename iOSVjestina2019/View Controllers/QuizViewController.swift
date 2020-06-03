@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PureLayout
 
 class QuizViewController: UIViewController {
 
@@ -31,12 +30,16 @@ class QuizViewController: UIViewController {
     var correctAnswerIndex: Int? = nil
 	
 	var numOfCorrectAnswers: Int = 0
+	
+	var startTime: Date? = nil
+	var endTime: Date? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Repo.createGradientBackground(view, backgroundGradientView)
-        
+		
+		startTime = Date.init()
         initComponents()
         displayQuestionAndAnswers()
     }
@@ -120,11 +123,13 @@ class QuizViewController: UIViewController {
         
         if currentQuestionIndex + 1 != quiz?.questions.count ?? 1 - 1 {
             currentQuestionIndex += 1
-            DispatchQueue.main.asyncAfter(deadline: .now() ) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
                 self.displayQuestionAndAnswers()
             }
         } else {
-            showEndGameScreen()
+			DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+				self.showEndGameScreen()
+			}
         }
     }
     
@@ -160,29 +165,84 @@ class QuizViewController: UIViewController {
 	}
 	
     fileprivate func showEndGameScreen() {
+		endTime = Date.init()
 		clearScreen(view: mainContainer)
 		displayQuizStats()
+		sendScoreToServer()
     }
 	
 	fileprivate func clearScreen(view: UIView) {
-		view.subviews.forEach { v in
-			switch v {
-				case is UIButton:
-					break
-				case is UIStackView:
-					v.removeFromSuperview()
-					break
-				case is UILabel:
-					v.removeFromSuperview()
-					break
-				default:
-					v.removeFromSuperview()
-					break
-			}
-		}
+		lblQuestion.removeFromSuperview()
+		quizProgressContainer.removeFromSuperview()
+		answerButtonContainer.removeFromSuperview()
+		lblQuizProgress.removeFromSuperview()
+		
+		answerButtonCollection.removeAll()
+		progressBarTabs.removeAll()
 	}
 	
 	fileprivate func displayQuizStats() {
+		let infoLabel = UILabel()
+		infoLabel.numberOfLines = 1
+		infoLabel.font = UIFont.systemFont(ofSize: 33)
+		infoLabel.textColor = .white
 		
+		if numOfCorrectAnswers < 4 {
+			infoLabel.text = "You can do better! \(numOfCorrectAnswers)/\(quiz?.questions.count ?? 0)"
+		} else if numOfCorrectAnswers < 7 {
+			infoLabel.text = "Good, but not great. \(numOfCorrectAnswers)/\(quiz?.questions.count ?? 0)"
+		} else {
+			infoLabel.text = "You're a true genius! \(numOfCorrectAnswers)/\(quiz?.questions.count ?? 0)"
+		}
+
+		mainContainer.addSubview(infoLabel)
+		
+		infoLabel.centerXAnchor.constraint(equalTo: mainContainer.centerXAnchor).isActive = true
+		infoLabel.centerYAnchor.constraint(equalTo: mainContainer.centerYAnchor).isActive = true
+
+		infoLabel.translatesAutoresizingMaskIntoConstraints = false
+	}
+	
+	fileprivate func sendScoreToServer() {
+		let elapsedTime: Double = endTime?.timeIntervalSince(startTime ?? Date.init()) ?? -1
+		let roundedElapsedTime = Double(round(elapsedTime * 100)/100)
+		
+		var score = Score()
+		score.quiz_id = self.quiz?.id ?? -1
+		score.no_of_correct = self.numOfCorrectAnswers
+		score.time = roundedElapsedTime
+		score.user_id = UserDefaults.standard.integer(forKey: "userID")
+		
+		do {
+			let jsonData = try JSONEncoder().encode(score)
+			
+			let url = URL(string: "https://iosquiz.herokuapp.com/api/result")!
+			
+			var request = URLRequest(url: url)
+			request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+			request.addValue(UserDefaults.standard.string(forKey: "token") ?? "", forHTTPHeaderField: "Authorization")
+			request.httpMethod = "POST"
+			request.httpBody = jsonData
+			
+			URLSession.shared.dataTask(with: request) { (data, response, error) in
+				if let httpResponse = response as? HTTPURLResponse {
+					let enumResponse = ServerResponse(rawValue: httpResponse.statusCode)
+					switch enumResponse {
+						case .OK:
+							DispatchQueue.main.async {
+								Repo.displayAlertMessage(vc: self, title: "Success!", message: "Score uploaded successfully")
+							}
+						default:
+							DispatchQueue.main.async {
+								Repo.displayAlertMessage(vc: self, title: "Error", message: "Something went wrong when sending score to the server")
+							}
+					}
+				}
+
+			}.resume()
+			
+		} catch {
+			Repo.displayAlertMessage(vc: self, title: "Error", message: "Unable to process data.")
+		}
 	}
 }

@@ -46,4 +46,12 @@ class Repo {
     public static func wrongAnswerColor() -> UIColor {
         return UIColor(red: 224/256, green: 61/256, blue: 85/256, alpha: 1)
     }
+    
+    public static func displayAlertMessage(vc: UIViewController, title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+        vc.present(alert, animated: true, completion: nil)
+    }
 }

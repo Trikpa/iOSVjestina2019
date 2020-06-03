@@ -81,6 +81,7 @@ class MainMenuViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.funFactContainer.isHidden = false
                     self.quizContainerTable.reloadData()
+                    
                 }
                 
             } else {
@@ -105,14 +106,14 @@ extension MainMenuViewController: UITableViewDataSource, UITableViewDelegate {
         
         let headerText = UILabel()
         headerText.adjustsFontSizeToFitWidth = true
-        switch section {
-            case 0:
+        switch arrSections[section] {
+            case .SCIENCE:
                 headerText.textAlignment = .left
                 headerText.text = "Science"
                 headerText.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
                 headerText.textColor = UIColor(red: 46/256, green: 95/256, blue: 242/256, alpha: 1)
                 headerText.font = UIFont.boldSystemFont(ofSize: 20)
-            case 1:
+            case .SPORTS:
                 headerText.textAlignment = .left
                 headerText.text = "Sports"
                 headerText.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
