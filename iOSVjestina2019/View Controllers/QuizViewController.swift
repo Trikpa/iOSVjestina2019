@@ -123,11 +123,11 @@ class QuizViewController: UIViewController {
         
         if currentQuestionIndex + 1 != quiz?.questions.count ?? 1 - 1 {
             currentQuestionIndex += 1
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.displayQuestionAndAnswers()
             }
         } else {
-			DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+			DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 				self.showEndGameScreen()
 			}
         }
